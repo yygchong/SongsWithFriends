@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="load.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link href="css/all.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Open Sans';
+      background-color: #121212;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<div id="invite">
+  <button class="button button-invite" onclick="share()">&nbsp;&nbsp;&nbsp;Invite&nbsp;&nbsp;&nbsp;</button>
+</div>
+
+<div class="chat-icon" onclick="openChat()">
+  <i class="fas fa-comment-alt" style="color:white; margin:0px 0px; font-size: 40px;"></i>
+</div>
+<body class="site">
+<!--   <div id="song_playlist">
+    <p id="playlist_song_1" onclick="remove_from_playlist(1)">
+      
+    </p>
+  </div> -->
+
+  <div id="overlay">
+    <div id="x" onclick="off()">X </div>
+    <div id="popup">
+      <div id = "popup-text">
+        <br><br>
+        Share link for your friends to join:
+        <br><br>
+      <div id="url-hyperlink" onclick="shareNext()">
+
+      </div>
+    </div>
+    </div>
+  </div>
+  <div id="search_overlay">
+    <div id="x" onclick="search_off()">X </div>
+    <div id="popup_search">
+      <input id="search_bar" type="text" placeholder="Search.." name="search">
+      <button id="myBtn" onclick="search_song()">Search</button>
+      <div id="search_results">
+        <a class="song_list" id="song_1" onclick="add_to_playlist(1)"></a>
+        <a class="song_list" id="song_2" onclick="add_to_playlist(2)"></a>
+        <a class="song_list" id="song_3" onclick="add_to_playlist(3)"></a>
+        <a class="song_list" id="song_4" onclick="add_to_playlist(4)"></a>
+        <a class="song_list" id="song_5" onclick="add_to_playlist(5)"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="playlist">
+      <div class="title" id="playlistName">Sample Playlist<i class="fas fa-pen" onclick="editName()"></i></div>
+      <i id="search_button" class="fas fa-plus" onclick="search_on()" style="color:white; margin:0px 0px;"></i>
+      <input id="remove_song_bar" type="text" placeholder="Enter # of song" name="remove_song">
+      <button id="remove_button" onclick="remove_from_playlist()">
+         Remove Song
+      </button>
+      
+      <div id="playlist_songs">
+        
+      </div>
+    </div>
+  </div>
+  <div class="control-panel">
+    <div class="currently-playing">
+      <div class="colorlightgrey"> Currently Playing: &nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="colorwhite" id="song"> &nbsp;&nbsp;&nbsp;</div>
+      <!-- split artist name and album name into two divs for separate updating -->
+      <div class="colorlightgreylighter" id="artist">  &nbsp;</div>
+      <div class="colorlightgreylighter" id="album"> </div>
+    </div>
+    <div class="controls">
+      <div class="volume">
+        <i class="fa fa-volume-mute" onclick="volumeMute()"></i>
+        <i onclick="togglePause(this)" class="fa fa-play" id="play-pause-button"></i>
+        <i class="fa fa-volume-up" onclick="volumeIncrease()"></i>
+      </div>
+      <div class="song-bar">
+        <div class="timer" id="time-elapsed">0:00 &nbsp;</div>
+        <div id="time-bar">
+          <div id="white_bar" style="width: 0%"></div>
+        </div>
+        <div class="timer" id="song-length">&nbsp; -:--</div>
+      </div>
+    </div>
+  </div>
+  
+    <div id = "chat-minimize" onclick="openChat()" style="cursor: pointer;">Open Chat </div>
+  <div id = "chat">
+    <div class="colorwhite" style="margin-left: 6%; display:flex; flex-direction:row; justify-content: space-between;">  Chat <div class="close" style="position: relative; cursor: pointer; font-size: 40px; margin-right: 5%;" onclick = "closeChat()"> X </div></div>
+
+    <div id="messages"></div>
+    <div class = "chatbox" style="bottom:15px; position:fixed;"> Say something: <input type="text" id="newMsg">
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="load.js"></script>
+  <meta name="viewport" content="width=device-width">
+</body>
+
+</html>
