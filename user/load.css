@@ -1,0 +1,392 @@
+/* Pen-specific styles */
+html, body, section {
+  height: 100%;
+}
+
+i{ font-size: 50px; margin: 10px 20px; color:#535353; cursor: pointer; }
+
+.play-pause-button { font-size: 50px; margin: 10px 20px; color:#535353; cursor: pointer; }
+
+.chat-icon{
+  display: none;
+}
+
+.title{
+  color: #fff;
+  font-size: 65px;
+  line-height: 150%;
+  margin-top: 40px;
+}
+
+.site{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.flex-container {
+  flex-direction: column;
+  flex: 1;
+}
+
+.playlist{
+  margin-left: 20%;
+}
+
+.control-panel{
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  justify-content: flex-start;
+}
+
+.currently-playing{
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+  margin-left: 5%;
+}
+
+.controls{
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+}
+
+.colorlightgrey{
+  color: #b3b3b3;
+  font-size: 35px;
+}
+
+.colorwhite{
+  color: white;
+  font-size: 35px;
+}
+
+.colorlightgreylighter{
+  color: #b3b3b3;
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+#invite {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+}
+
+#overlay, #search_overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#popup, #popup_search{
+  position: fixed;
+  border-radius: 25px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  height:100%;
+  width:100%;
+  max-width: 800px;
+  max-height: 400px;
+  margin-top: -200px; /* Negative half of height. */
+  margin-left: -400px; /* Negative half of width. */
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#popup-text{
+  position: relative;
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+}
+
+#x, #x_search{
+  color: white;
+  font-size: 70px;
+  text-align: right;
+  padding: 40px;
+}
+
+.song_list {
+  display: block;
+  color: black;
+}
+
+#search_results {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#search_results a {
+  onclick: "add_to_playlist()";
+}
+
+#playlist_songs {
+  overflow-y:scroll;
+  height: 500px;
+  font-size: 30px;
+}
+
+#url-hyperlink{
+  font-size: 16px;
+  color: blue;
+}
+
+.song-bar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.75%;
+  margin-left: 15px;
+}
+
+#time-bar {
+  border: 1px solid #4a4a4a;
+  border-radius: 25px;
+  width: 920px;
+  max-width: 60%;
+  height: 5px;
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: #4a4a4a;
+}
+
+#white_bar {
+  max-width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.timer {
+  color: #a1a1a1;
+  font-weight: lighter;
+}
+
+.button-invite {cursor: pointer;background-color: #1db954; font-size: 40px ; font-weight: bold; display: block; text-align: center; border-style: none; border-radius: 25px; color: white; padding: 10px;}
+
+#chat{
+  background-image: linear-gradient(#221f20, #515151);
+  position: fixed;
+  display: block;
+  height: 50%;
+  width: 20%;
+  bottom: 0px;
+  right: 7%;
+  padding: 10px;
+}
+
+#chat-minimize{
+  display: block;
+  background-color: #02bb4f;
+  position: fixed;
+  height: 4%;
+  width: 20%;
+  bottom: 0px;
+  right: 7%;
+  padding: 10px;
+
+}
+
+#messages{
+  max-height: 75%;
+  overflow-y: auto; 
+  
+}
+/*Mobile View*/
+@media (max-width: 800px){
+
+  i{font-size: 30px; margin: 10px 30px; color:#535353; cursor: pointer; }
+
+  .title{
+    color: #fff;
+    font-size: 35px;
+    line-height: 150%;
+    margin-top: 120px;
+  }
+
+  .site{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .playlist{
+    margin-left: 8%;
+  }
+  .control-panel{
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    height: 27%;
+    min-width: 250px;
+    justify-content: center;
+  }
+
+  .currently-playing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+  }
+
+  .controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%;
+  }
+
+  .colorlightgrey{
+    display:none;
+  }
+
+  .colorwhite{
+    color: white;
+    font-size: 19px;
+  }
+
+  .colorlightgreylighter{
+    color: #b3b3b3;
+    font-size: 19px;
+    font-weight: lighter;
+  }
+
+  #invite {
+    position: fixed;
+    top: 3%;
+    right: 5%;
+  }
+
+  .chat-icon{
+    display: block;
+    position: fixed;
+    top: 3%;
+    left: 8%;
+  }
+
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  #popup, #popup_search{
+      position: fixed;
+      border-radius: 25px;
+      background: white;
+      top: 50%;
+      left: 50%;
+      height:100%;
+      width:100%;
+      max-width: 300px;
+      max-height: 200px;
+      margin-top: -100px; /* Negative half of height. */
+      margin-left: -150px; /* Negative half of width. */
+      text-align: center;
+      word-wrap: break-word;
+    }
+  
+  #popup-text{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+  }
+
+  #x{
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    padding: 40px;
+  }
+
+  #url-hyperlink{
+    font-size: 11px;
+    color: blue;
+  }
+
+  .song-bar {
+    margin-top: 1.75%;
+  }
+
+  #time-bar {
+    border: 1px solid #4a4a4a;
+    border-radius: 25px;
+    width: 240px;
+    height: 5px;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #4a4a4a;
+  }
+
+#white_bar {
+  max-width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+  .timer {
+    color: #a1a1a1;
+    font-weight: lighter;
+  }
+
+  .volume {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  .button-invite {cursor: pointer;background-color: #1db954; font-size: 20px ; font-weight: bold; display: block; text-align: center; border-style: none; border-radius: 25px; color: white; padding: 10px;}
+
+  #chat{
+    background-image: linear-gradient(#221f20, #515151);
+    position: fixed;
+    display: none;
+    height: 50%;
+    width: 81%;
+    bottom: 0px;
+    right: 7%;
+    padding: 10px;
+  }
+
+  #chat-minimize{
+    display: none;
+
+  }
+
+  #playlist_songs {
+    overflow-y:scroll;
+    height: 300px;
+  }
+
+}

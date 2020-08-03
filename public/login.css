@@ -1,0 +1,83 @@
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  background-color: #121212;
+}
+
+#title {
+  /*text-align: center;*/
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50pt;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+#message {
+  /*text-align: center;*/
+  font-family: "Open Sans Light", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 24pt;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+  /*align-items: center;*/
+  justify-content: center;
+}
+
+
+a {
+  /* vertical-align: middle;
+	display: block;
+	text-align: center;*/
+  font-family: "Open Sans Light", sans-serif;
+  border-style: solid;
+  border-color: #1db954;
+  border-radius: 20px;
+  background-color: transparent;
+  font-size: 16pt;
+  color: white;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-top{
+  font-family: "Open Sans Light", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 13%;
+}
+
+.login-text{
+  display: block;
+  color: white;
+  text-align: right;
+  font-size: 20px;
+}
+
+.push {
+    margin-left: auto;
+}
+
+hr {
+  color: white;
+  border: 1px inset;
+  width: 100%;
+}

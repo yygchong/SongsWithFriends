@@ -1,0 +1,124 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show me!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/=style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Long+Cang" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <script src="./script.js"></script>
+  </head>
+
+  <body>
+    <div id="overlay">
+      <p id="exit" onclick="close_overlay()">
+        &#10005
+      </p>
+
+      <div id="share_box">
+        <h1>
+          Share your postcard:
+        </h1>
+        <a id="display_link" href="https://randy-murphy-postcard.glitch.me/display.html?id=tt35a75686XqiEw2OWK94e">
+          https://randy-murphy-postcard.glitch.me/display.html?id=tt35a75686XqiEw2OWK94e
+        </a>
+      </div>
+    </div>
+    <header>
+      <h1>
+         Daily Postcard Creator
+      </h1>
+    </header>
+
+    <main>
+
+
+
+    <div id="controls">
+
+
+
+      <div id="image">
+
+
+        <img id="serverImage"/>
+
+        <div id="choose_file">
+          <label for="fileChooser" id="file_chooser">Choose Image</label>
+          <input type="file" id="fileChooser" accept="image/png, .jpeg, .jpg, image/gif">
+        </div>
+
+      </div>
+
+      <div id="divider" display="none">
+      </div>
+
+      <div id="message">
+        <textarea id="message_txt" placeholder="Write your message here!"></textarea>
+      </div>
+
+    </div>
+
+    <div id="fonts">
+
+      <div id="choose_font">
+
+        <p>
+          Choose your font
+        </p>
+
+        <u1>
+          <li class="font active_font" onclick="font_indie()" id="Indie">Indie Flower</li>
+          <li class="font" onclick="font_dancing()" id="Dancing">Dancing Script</li>
+          <li class="font" onclick="font_long()" id="Long">Long Cang</li>
+          <li class="font" onclick="font_homemade()" id="Homemade">Homemade Apple</li>
+        </u1>
+
+
+
+      </div>
+
+      <div id="choose_color">
+
+        <p>
+          Choose your color
+        </p>
+
+        <div id="colors">
+          <div class="color_box active_color" onclick="change_color(1)" onmouseover="hover_color(1)" onmouseleave="revert_color(1)" id="color1"></div>
+          <div class="color_box" onclick="change_color(2)" onmouseover="hover_color(2)" onmouseleave="revert_color(2)" id="color2"></div>
+          <div class="color_box" onclick="change_color(3)" onmouseover="hover_color(3)" onmouseleave="revert_color(3)" id="color3"></div>
+          <div class="color_box" onclick="change_color(4)" onmouseover="hover_color(4)" onmouseleave="revert_color(4)" id="color4"></div>
+          <div class="color_box" onclick="change_color(5)" onmouseover="hover_color(5)" onmouseleave="revert_color(5)" id="color5"></div>
+          <div class="color_box" onclick="change_color(6)" onmouseover="hover_color(6)" onmouseleave="revert_color(6)" id="color6"></div>
+          <div class="color_box" onclick="change_color(7)" onmouseover="hover_color(7)" onmouseleave="revert_color(7)" id="color7"></div>
+          <div class="color_box" onclick="change_color(8)" onmouseover="hover_color(8)" onmouseleave="revert_color(8)" id="color8"></div>
+          <div class="color_box" onclick="change_color(9)" onmouseover="hover_color(9)" onmouseleave="revert_color(9)" id="color9"></div>
+        </div>
+
+      </div>
+
+      <button onclick="new_playlist()" id="share">
+        Create Playlist
+      </button>
+
+    </div>
+
+    </main>
+
+    <footer>
+      <p class="msg">
+         Made on Glitch!
+      </p>
+    </footer>
+
+  </body>
+</html>
